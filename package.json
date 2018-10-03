@@ -1,0 +1,23 @@
+{
+  "name": "duo-waqay",
+  "version": "1.0.0",
+  "description": "Website for musical group Duo Waqay",
+  "author": "Andrew Schmitt",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "bootstrap-vue": "^2.0.0-beta",
+    "cross-env": "^5.2.0",
+    "g": "^2.0.1",
+    "nuxt": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
