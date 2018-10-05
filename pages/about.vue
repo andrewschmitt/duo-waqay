@@ -25,6 +25,9 @@
 <script>
 import Logo from '~/components/Logo.vue'
 
+// Bootstrap
+import 'bootstrap'
+
 export default {
   components: {
     Logo
@@ -32,35 +35,153 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  // remove margin on body
+  body {
+    margin: 0px;
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  /**
+  * NAVBAR
+  */
+  .navbar {
+    background-color: #eee;
 
-.links {
-  padding-top: 15px;
-}
+    &__header {
+      margin: 0;
+      padding: 0.3rem;
+    }
+  }
+
+
+  /**
+  * HERO IMG
+  */
+  .hero {
+    background-image: url('~assets/img/hero-img.jpg');
+    background-size: cover;
+    padding: 17% 25% 40%;
+
+    &__header {
+      font-size: 2rem;
+      text-align: center;
+      color: #fff;
+      background-color: black;
+      // margin: 0; 
+    }
+
+    &__definition {
+      font-size: 1rem;
+    }
+  }
+
+  /**
+  * MAIN CONTENT
+  */
+  .main-content {
+    // background-image: #eee;
+  }
+  
+  /**
+  * DEFINITION
+  */
+  .definition {
+    padding-top: 2rem;
+
+    &__header {
+      margin: 0;
+    }
+
+    &__linguistic {
+       font-size: 1.3em;
+      font-weight: 700;
+      color: #999;
+    }
+
+    &__button {
+      text-align: center; 
+      padding: 1rem;
+    }
+  }
+
+  /**
+  * CONCERTS / TOUR DATES
+  */
+  .events {
+    padding-top: 2em;
+    
+  }
+
+  /**
+  * EMBEDDED VIDEO
+  */
+  .video-frame {
+    padding: 30% 0;
+    width: 100%;
+    position: relative;
+    margin: 2rem 0;
+
+    &__embedded {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  /*------------------------------------*\
+  #TABLET RESOLUTION
+  \*------------------------------------*/
+  @media(min-width: 768px) {
+    /**
+    * HERO IMG
+    */
+    .hero {
+      padding: 18% 30% 40%;
+
+      &__header {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  /*------------------------------------*\
+  #LAPTOP RESOLUTION
+  \*------------------------------------*/
+  @media(min-width: 1024px) {
+    /**
+    * HERO IMG
+    */
+    .hero {
+      padding: 18% 30% 40%;
+
+      &__header {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  /*------------------------------------*\
+  #LARGE RESOLUTION
+  \*------------------------------------*/
+  @media(min-width: 1200px) {
+    /**
+    * HERO IMG
+    */
+    .hero {
+      padding: 18% 30% 40%;
+
+      &__header {
+        font-size: 6rem;
+      }
+    }
+  }
 </style>
