@@ -4,9 +4,9 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     
     <!-- NAV -->
-    <nav class="navbar">
+    <!-- <nav class="navbar">
       <h1 class="navbar__header">duo WAQAY</h1>
-    </nav>
+    </nav> -->
 
     <!-- MAIN CONTENT -->
     <main>
@@ -14,7 +14,7 @@
       <!-- HERO IMG -->
       <section class="hero">
         <header>
-          <h1 class="hero__header">duo WAQAY</h1>
+          <!-- <h1 class="hero__header">duo WAQAY</h1> -->
         </header>
         <!-- <p><i>[wah-kaie]</i></p> -->
       </section>
@@ -32,57 +32,129 @@
                   <li>The cry of a musical instrument</li>
                   <li>A Latin guitar duo based in the Ottawa-Gatineau region. Providing entertainment for private and corporate events, parties, and more.</li>
                 </ol>
-                <div class="definition__button"><button class="btn">Book Now</button></div>
+                <div class="definition__button"><button class="btn btn--red">Book your event</button></div>
               </div>
             </div>
 
             <!-- EVENTS -->
             <div class="col-md-7 col-lg-8">
               <div class="events">
-                <h2 class="events__header">EVENTS</h2>
+                <h2 class="events__header">NEXT EVENT</h2>
                 <div class="event__schedule">
                   <table class="table table-hover">
                     <tr>
-                      <td class="event__date align-middle">Oct 5, 2018</td>
-                      <td class="event__location align-middle"><a href="https://pressed-ottawa.com/">Pressed</a></td>
-                      <td class="event__button align-middle"><button class="btn">TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
+                      <td class="event__date align-middle">March 5, 2019</td>
+                      <td class="event__location align-middle"><a href="https://bistroalegria.ca/">Bistro Alégria</a></td>
+                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <fa :icon="['fas', 'fa-ticket']" /></button></td>
                     </tr>
 
                     <tr>
-                      <td class="event__date align-middle">Nov 3, 2018</td>
-                      <td class="event__location align-middle">25 Anniversary Galla of Eco-Latino News Paper</td>
-                      <td class="event__button align-middle"><button class="btn">TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
+                      <td class="event__date align-middle">May 29, 2019</td>
+                      <td class="event__location align-middle">National Arts Centre</td>
+                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
+                    </tr>
+                  </table>
+                  <!-- <a class="btn btn-grey" href="#">See more events...</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LATEST ALBUM STUFF -->
+        <div class="album ">
+          <div class="container">
+            <div class="album__header-block">
+              <h2 class="album__header">ALBUM</h2>
+              <i class="album__subheader">Latin Roots</i>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <img src="http://cdbaby.name/i/r/iralb01552705_large.jpg" alt="" class="img-fluid album__img">
+              </div>
+              <div class="col-md-6">
+                <!-- <div class="album__soundtrack">song</div> -->
+                <div class="album__description">
+                  <p>Known for their “unique” and “symbiotic connectivity” while playing together, Duo Waqáy has perfected their duality over the course of the past nine years. Guitarists Gabriela Iznardo and Alejandro Vega have been performing alongside one another since early adolescence and are both graduates of the University of Ottawa for Performance Guitar, one holding a Bachelor’s degree and the other a Master’s degree. While growing up playing together, they developed an inseparable bond; connected by their love for guitar and their latin heritage, they quickly discovered their passion for Latin American and Spanish rhythms. The fusion of Alejandro’s Cuban heritage and Gabriela’s Peruvian and Argentinian background lead to the creation of a unique sound which sparks energy and creativity into the hearts of their audience. It is this very fusion of culture which created their name “[Duo] “Waqáy”, a Quechuan word that means “The cry and timbre of a musical instrument”.</p> 
+                  <p>Although they have been playing together for almost a decade, 2017 marked the debut of their professional performance career and brought some new and captivating repertoire which they are so very excited to share with their audiences.</p>
+                  <!-- <button class="btn btn--white">Buy Now!</button> -->
+                  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <table>
+                    <tr><td><input type="hidden" name="on0" value="Album: Latin Roots"></td></tr>
+                    </table>
+                    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIDEO EMBED -->
+        <div class="video-frame">
+          <iframe class="video-frame__embedded" width="100%" height="500px" src="https://www.youtube.com/embed/c2DmQUYctPc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <!-- ABOUT US --> 
+        <div class="about about--brown">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div>
+                  <h2 class="about__header">ABOUT</h2>
+                  <p>Based in the Ottawa-Gatineau Region, this Latin guitar duo has been quickly establishing a reputation for their unique and symbiotic connectivity on stage. Guitarists Gabriela Iznardo and Alejandro Vega have wowed and delighted audiences with their signatre blend of Latin American and Spanish rhythms.</p>
+                  <p>Making themselves available for venues, private and corporate events,  reunions, and dinner parties in Ottawa, Montreal, and Toronto, Duo Waqay will provide a fusion of guitar and entertainment to suit any venue.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UPCOMING EVENTS -->
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="events">
+                <h2 class="events__header events__header--red">EVENTS</h2>
+                <div class="event__schedule">
+                  <table class="table table-hover">
+                    <tr>
+                      <td class="event__date align-middle">March 5, 2019</td>
+                      <td class="event__location align-middle"><a href="https://bistroalegria.ca/">Bistro Alégria</a></td>
+                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <fa :icon="['fas', 'fa-ticket']" /></button></td>
                     </tr>
 
                     <tr>
-                      <td class="event__date align-middle">November 19th, 2018</td>
-                      <td class="event__location align-middle">OGS Young Artists Series</td>
-                      <td class="event__button align-middle"><button class="btn">TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
+                      <td class="event__date align-middle">May 29, 2019</td>
+                      <td class="event__location align-middle">National Arts Centre</td>
+                      <td class="event__button align-middle"><button class="btn btn--red">TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
                     </tr>
                   </table>
                 </div>
               </div>
             </div>
-
-            <!-- VIDEO EMBED -->
-            <div class="video-frame">
-              <iframe class="video-frame__embedded" width="100%" height="500px" src="https://www.youtube.com/embed/m_vZ4JLnfDI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-
-            <!-- ABOUT US --> 
-            <div class="col">
-              <div class="about">
-                  <h2 class="about__header">ABOUT</h2>
-                  <p>Based in the Ottawa-Gatineau Region, this Latin guitar duo has been quickly establishing a reputation for their unique and symbiotic connectivity on stage. Guitarists Gabriela Iznardo and Alejandro Vega have wowed and delighted audiences with their signatre blend of Latin American and Spanish rhythms.</p>
-                  <p>Making themselves available for venues, private and corporate events,  reunions, and dinner parties in Ottawa, Montreal, and Toronto, Duo Waqay will provide a fusion of guitar and entertainment to suit any venue.</p>
-              </div>
-            </div>
-
-
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h3 class="footer__header">duo WAQAY</h3>
+            <div class="media-tags d-flex justify-content-center align-items-center">
+              <a href="http://google.ca" target="_blank" class="fa fa--facebook"><fa :icon="['fab', 'facebook-f']" /></a>
+              <a href="http://google.ca" target="_blank" class="fa fa--youtube"><fa :icon="['fab', 'youtube']" /></a>
+              <a href="http://google.ca" target="_blank" class="fa fa--instagram"><fa :icon="['fab', 'instagram']" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -101,6 +173,13 @@ export default {
 
 <style lang="scss">
 
+  // COLORS
+  $orange: #e77431;
+  $red: #b5302b;
+  $brown: #503431;
+  $teal: #55a393;
+  $green: #4b6c57;
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -116,7 +195,7 @@ export default {
   * NAVBAR
   */
   .navbar {
-    background-color: #eee;
+    background-color: $orange;
 
     &__header {
       margin: 0;
@@ -131,6 +210,7 @@ export default {
   .hero {
     background-image: url('~assets/img/hero-img.jpg');
     background-size: cover;
+    background-position: center;
     padding: 17% 25% 40%;
 
     &__header {
@@ -180,7 +260,65 @@ export default {
   */
   .events {
     padding-top: 2em;
+
+    &__header {
+
+      &--red {
+        color: $red;
+      }
+    }
     
+  }
+
+  /**
+  * ALBUM
+  */
+  .album {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+
+    // ELEMENTS
+    &__header-block {
+      display: block;
+      margin: auto;
+      width: 175px;
+      margin-bottom: 2rem;
+    }
+
+    &__header {
+      margin: 0;
+    }
+
+    &__subheader {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #999;
+    }
+
+    &__img {
+      display: block;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+
+    &__soundtrack {
+      background-color: #eee;
+      height: 4rem;
+    }
+
+    &__description {
+      // padding: 1rem 0;
+    }
+
+    // Modifiers
+    &--brown {
+      background-color: $brown;
+    }
+
+    &--red {
+      background-color: $red;
+    }
   }
 
   /**
@@ -190,7 +328,7 @@ export default {
     padding: 30% 0;
     width: 100%;
     position: relative;
-    margin: 2rem 0;
+    // margin: 2rem 0;
 
     &__embedded {
       position: absolute;
@@ -198,6 +336,114 @@ export default {
       height: 100%;
       top: 0;
       bottom: 0;
+    }
+  }
+
+  /**
+  * ABOUT
+  */
+  .about {
+    padding: 2rem 0;
+    background-color: #333;
+    color: #fff;
+
+    &--brown {
+      background-color: $brown;
+    }
+
+    &--red {
+      background-color: $red;
+    }
+  }
+
+  /**
+  * Footer
+  */
+  .footer {
+    // min-height: 10rem;
+    background-color: #333;
+    padding: 2rem 0;
+
+    //
+    &__header {
+      color: #fff;
+      text-align: center;
+    }
+  }
+  
+  /**
+  * social media
+  */
+  .fa {
+    // padding: 15px;
+    font-size: 1.5rem;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: .5rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: all 0.4s ease;
+
+    &:hover {
+      opacity: 0.7;
+      color: $orange;
+      border: 2px solid $orange;
+      transition: all 0.4s ease;
+    }
+    
+    // 
+    &--facebook {
+      // background-color: #3B5998;
+      color: #fff;
+    }
+
+    &--youtube {
+      // background-color: #bb0000;
+      color: #fff;
+    }
+
+    &--instagram {
+      // background-color: #125688;
+      color: #fff;
+    }
+  }
+
+  .svg-inline--fa {
+    vertical-align: -0.18em;
+  }
+  
+  /**
+  * button styles
+  */
+  .btn {
+    border-radius: 0px;
+  }
+  .btn--grey {
+    background-color: #ccc;
+  }
+  .btn--white {
+    background-color: #fff;
+  }
+
+  .btn--red {
+    color: $red;
+    border: 2px solid $red;
+
+    &:hover {
+      opacity: .75;
+      color: $red;
+    }
+  }
+
+  .btn--orange {
+    color: $orange;
+    border: 2px solid $orange;
+
+    &:hover {
+      opacity: .75;
+      color: $orange;
     }
   }
 
@@ -209,10 +455,10 @@ export default {
     * HERO IMG
     */
     .hero {
-      padding: 18% 30% 40%;
+      padding: 17% 30% 40%;
 
       &__header {
-        font-size: 3rem;
+        font-size: 4rem;
       }
     }
   }
