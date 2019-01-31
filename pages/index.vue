@@ -150,25 +150,29 @@
 
         <div class="contact">
           <div class="container">
-            <h1 class="title">
-              Contact
-            </h1>
+            <h3 class="title">CONTACT</h3>
+            <p>We'd love to hear from you! Please drop us a line if you've any query related to our products or services.</p>
             <div class="content">
               <form name="contact" action="" method="post" netlify>
-                <input type="hidden" name="form-name" value="contact" />
-                <label class="form-label" for="name">
-                  Name:
-                </label>
-                <input class="form-field" name="name" id="name" />
-                <label class="form-label" for="email">
-                  Email:
-                </label>
-                <input class="form-field" name="email" id="email" />
-                <label class="form-label" for="message">
-                  Message:
-                </label>
-                <textarea class="form-field" name="message" id="message"></textarea>
-                <input class="form-button" type="submit" value="Send message" />
+                <div class="form-group">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <label for="inputContact">Name</label>
+                  <input class="form-control" id="inputContact" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <!-- <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button class="form-button btn btn--red" type="submit" value="Send message">SEND</button>
               </form>
             </div>
           </div>
@@ -404,6 +408,13 @@ export default {
     &--red {
       background-color: $red;
     }
+  }
+
+  /**
+  * CONTACT
+  */
+  .contact {
+    margin: 1rem auto; 
   }
 
   /**
