@@ -17,6 +17,7 @@
           <!-- <h1 class="hero__header">duo WAQAY</h1> -->
         </header>
         <!-- <p><i>[wah-kaie]</i></p> -->
+        <div class="hero__chevron"><fa :icon="['fas', 'chevron-down']" /></div>
       </section>
 
       <!-- DEFINITION AND EVENTS -->
@@ -24,7 +25,7 @@
         <div class="container">
           <div class="row">
             <!-- DEFINITION -->
-            <div class="col-md-5 col-lg-4">
+            <div class="col-md-5">
               <div class="definition">
                 <h2 class="definition__header">WAQAY</h2>
                 <i class="definition__linguistic">[wah-kaie]</i>
@@ -32,29 +33,36 @@
                   <li>The cry of a musical instrument</li>
                   <li>A Latin guitar duo based in the Ottawa-Gatineau region. Providing entertainment for private and corporate events, parties, and more.</li>
                 </ol>
-                <div class="definition__button"><button class="btn btn--red">Book your event</button></div>
+                <div class="definition__button"><button class="btn btn--red">BOOK YOUR EVENT</button></div>
               </div>
             </div>
 
             <!-- EVENTS -->
-            <div class="col-md-7 col-lg-8">
+            <div class="col-md-7">
               <div class="events">
                 <h2 class="events__header">NEXT EVENT</h2>
-                <div class="event__schedule">
-                  <table class="table table-hover">
+                <div class="events__schedule">
+                  <!-- <table class="table table-hover">
                     <tr>
                       <td class="event__date align-middle">March 5, 2019</td>
                       <td class="event__location align-middle"><a href="https://bistroalegria.ca/">Bistro Alégria</a></td>
-                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <fa :icon="['fas', 'fa-ticket']" /></button></td>
+                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS</button></td>
                     </tr>
 
                     <tr>
                       <td class="event__date align-middle">May 29, 2019</td>
                       <td class="event__location align-middle">National Arts Centre</td>
-                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
+                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS</button></td>
                     </tr>
-                  </table>
-                  <!-- <a class="btn btn-grey" href="#">See more events...</a> -->
+                  </table> -->
+                  <div class="row">
+                    <div class="col"><img src="@/assets/img/event-thumbnail.jpeg" alt="" class="img-fluid"></div>
+                    <div class="col">
+                      <h3>Bistro Alégria</h3>
+                      <p>May 29, 2019</p>
+                      <button class="btn btn--red disabled" disabled>BUY TICKETS</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -139,6 +147,32 @@
             </div>
           </div>
         </div>
+
+        <div class="contact">
+          <div class="container">
+            <h1 class="title">
+              Contact
+            </h1>
+            <div class="content">
+              <form name="contact" action="" method="post" netlify>
+                <input type="hidden" name="form-name" value="contact" />
+                <label class="form-label" for="name">
+                  Name:
+                </label>
+                <input class="form-field" name="name" id="name" />
+                <label class="form-label" for="email">
+                  Email:
+                </label>
+                <input class="form-field" name="email" id="email" />
+                <label class="form-label" for="message">
+                  Message:
+                </label>
+                <textarea class="form-field" name="message" id="message"></textarea>
+                <input class="form-button" type="submit" value="Send message" />
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -147,9 +181,9 @@
           <div class="col">
             <h3 class="footer__header">duo WAQAY</h3>
             <div class="media-tags d-flex justify-content-center align-items-center">
-              <a href="http://google.ca" target="_blank" class="fa fa--facebook"><fa :icon="['fab', 'facebook-f']" /></a>
-              <a href="http://google.ca" target="_blank" class="fa fa--youtube"><fa :icon="['fab', 'youtube']" /></a>
-              <a href="http://google.ca" target="_blank" class="fa fa--instagram"><fa :icon="['fab', 'instagram']" /></a>
+              <a href="https://www.facebook.com/duowaqay/" target="_blank" class="fa fa--facebook"><fa :icon="['fab', 'facebook-f']" /></a>
+              <a href="https://www.youtube.com/channel/UCmMtA54V0IBvaJgBVHPgK6Q" target="_blank" class="fa fa--youtube"><fa :icon="['fab', 'youtube']" /></a>
+              <a href="https://www.instagram.com/duowaqay/" target="_blank" class="fa fa--instagram"><fa :icon="['fab', 'instagram']" /></a>
             </div>
           </div>
         </div>
@@ -212,6 +246,7 @@ export default {
     background-size: cover;
     background-position: center;
     padding: 17% 25% 40%;
+    position: relative;
 
     &__header {
       font-size: 2rem;
@@ -223,6 +258,17 @@ export default {
 
     &__definition {
       font-size: 1rem;
+    }
+
+    &__chevron {
+      display: block;
+      position: absolute;
+      bottom: 10%;
+      left: 0px;
+      font-size: 3rem;
+      color: #fff;
+      text-align: center;
+      width: 100vw;
     }
   }
 
@@ -250,7 +296,7 @@ export default {
     }
 
     &__button {
-      text-align: center; 
+      // text-align: center; 
       padding: 1rem;
     }
   }
@@ -266,6 +312,10 @@ export default {
       &--red {
         color: $red;
       }
+    }
+
+    &__schedule {
+      margin-bottom: 2rem;
     }
     
   }
