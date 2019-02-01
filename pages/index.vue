@@ -153,7 +153,7 @@
             <h3 class="title">CONTACT</h3>
             <p>We'd love to hear from you! Please drop us a line if you've any query related to our products or services.</p>
             <div class="content">
-              <form name="contact" action="" method="post" netlify>
+              <form name="contact" method="POST" data-netlify="true">
                 <div class="form-group">
                   <input type="hidden" name="form-name" value="contact" />
                   <label for="inputContact">Name</label>
