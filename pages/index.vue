@@ -153,15 +153,15 @@
             <h3 class="title">CONTACT</h3>
             <p>We'd love to hear from you! Please drop us a line if you've any query related to our products or services.</p>
             <div class="content">
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" method="post" data-netlify="true">
                 <div class="form-group">
                   <input type="hidden" name="form-name" value="contact" />
                   <label for="inputContact">Name</label>
-                  <input class="form-control" id="inputContact" placeholder="John Doe">
+                  <input class="form-control" id="inputContact" placeholder="John Doe" name="name">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <!-- <div class="form-group form-check">
@@ -170,7 +170,7 @@
                 </div> -->
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Message</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
                 </div>
                 <button class="form-button btn btn--red" type="submit" value="Send message">SEND</button>
               </form>
