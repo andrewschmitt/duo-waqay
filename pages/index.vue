@@ -177,18 +177,43 @@
             </div>
           </div>
         </div>
+
+
+        
       </section>
     </main>
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col">
-            <h3 class="footer__header">duo WAQAY</h3>
+          <div class="col footer__divide-line">
+            <h3 class="footer__header">Follow duo WAQAY</h3>
             <div class="media-tags d-flex justify-content-center align-items-center">
               <a href="https://www.facebook.com/duowaqay/" target="_blank" class="fa fa--facebook"><fa :icon="['fab', 'facebook-f']" /></a>
               <a href="https://www.youtube.com/channel/UCmMtA54V0IBvaJgBVHPgK6Q" target="_blank" class="fa fa--youtube"><fa :icon="['fab', 'youtube']" /></a>
               <a href="https://www.instagram.com/duowaqay/" target="_blank" class="fa fa--instagram"><fa :icon="['fab', 'instagram']" /></a>
             </div>
+          </div>
+          <div class="col">
+            <!-- Begin Mailchimp Signup Form -->
+            <div id="mc_embed_signup" class="mc-signup">
+              <form action="https://duowaqay.us20.list-manage.com/subscribe/post?u=d016f0f155fab9fd240310503&amp;id=698009c923" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <h3 class="footer__header">Subscribe to our mailing list</h3>
+                  <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+                  <div class="mc-field-group form-group">
+                    <label for="mce-EMAIL">Email Address </label>
+                    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+                  </div>
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d016f0f155fab9fd240310503_698009c923" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button form-button btn btn--white"></div>
+                </div>
+              </form>
+            </div>
+            <!--End mc_embed_signup-->
           </div>
         </div>
       </div>
@@ -418,6 +443,14 @@ export default {
   }
 
   /**
+  * mc-signup
+  */
+  .mc-signup {
+    // margin: 1rem auto;
+    color: #fff;
+  }
+
+  /**
   * Footer
   */
   .footer {
@@ -429,6 +462,11 @@ export default {
     &__header {
       color: #fff;
       text-align: center;
+    }
+
+    // 
+    &__divide-line {
+      // border-right: 1px solid #fff;
     }
   }
   
@@ -485,7 +523,13 @@ export default {
     background-color: #ccc;
   }
   .btn--white {
-    background-color: #fff;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+
+    &:hover {
+      color: #ccc;
+    }
   }
 
   .btn--red {
