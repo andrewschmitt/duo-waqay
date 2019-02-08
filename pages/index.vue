@@ -74,8 +74,8 @@
         <div class="album ">
           <div class="container">
             <div class="album__header-block">
-              <h2 class="album__header">ALBUM</h2>
-              <i class="album__subheader">Latin Roots</i>
+              <h2 class="album__header">LATIN ROOTS</h2>
+              <i class="album__subheader">Available Now</i>
             </div>
             
             <div class="row">
