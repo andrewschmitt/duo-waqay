@@ -33,7 +33,7 @@
                   <li>The cry of a musical instrument</li>
                   <li>A Latin guitar duo based in the Ottawa-Gatineau region. Providing entertainment for private and corporate events, parties, and more.</li>
                 </ol>
-                <div class="definition__button"><button class="btn btn--red">BOOK YOUR EVENT</button></div>
+                <div class="definition__button"><button class="btn btn--red disabled" disabled>BOOK YOUR EVENT</button></div>
               </div>
             </div>
 
@@ -59,8 +59,9 @@
                     <div class="col"><img src="@/assets/img/event-thumbnail.jpeg" alt="" class="img-fluid"></div>
                     <div class="col">
                       <h3>Bistro Alégria</h3>
-                      <p>May 29, 2019</p>
-                      <button class="btn btn--red disabled" disabled>BUY TICKETS</button>
+                      <p>March 2, 2019</p>
+                      <!-- <button class="btn btn--red disabled" disabled>BUY TICKETS</button> -->
+                      <a href="https://www.facebook.com/events/400439614047030/" target="_blank" class="btn btn--red">MORE</a>
                     </div>
                   </div>
                 </div>
@@ -139,7 +140,7 @@
                     <tr>
                       <td class="event__date align-middle">May 29, 2019</td>
                       <td class="event__location align-middle">National Arts Centre</td>
-                      <td class="event__button align-middle"><button class="btn btn--red">TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
+                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
                     </tr>
                   </table>
                 </div>
@@ -185,7 +186,7 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col footer__divide-line">
+          <div class="col-sm footer__divide-line">
             <h3 class="footer__header">Follow duo WAQAY</h3>
             <div class="media-tags d-flex justify-content-center align-items-center">
               <a href="https://www.facebook.com/duowaqay/" target="_blank" class="fa fa--facebook"><fa :icon="['fab', 'facebook-f']" /></a>
@@ -193,7 +194,7 @@
               <a href="https://www.instagram.com/duowaqay/" target="_blank" class="fa fa--instagram"><fa :icon="['fab', 'instagram']" /></a>
             </div>
           </div>
-          <div class="col">
+          <div class="col-sm">
             <!-- Begin Mailchimp Signup Form -->
             <div id="mc_embed_signup" class="mc-signup">
               <form action="https://duowaqay.us20.list-manage.com/subscribe/post?u=d016f0f155fab9fd240310503&amp;id=698009c923" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -359,9 +360,9 @@ export default {
 
     // ELEMENTS
     &__header-block {
-      display: block;
-      margin: auto;
-      width: 175px;
+      // display: block;
+      // margin: auto;
+      // width: 175px;
       margin-bottom: 2rem;
     }
 
