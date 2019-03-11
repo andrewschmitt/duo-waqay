@@ -33,7 +33,7 @@
                   <li>The cry of a musical instrument</li>
                   <li>A Latin guitar duo based in the Ottawa-Gatineau region. Providing entertainment for private and corporate events, parties, and more.</li>
                 </ol>
-                <div class="definition__button"><button class="btn btn--red disabled" disabled>BOOK YOUR EVENT</button></div>
+                <div class="definition__button"><button class="btn btn--red disabled" disabled>BOOK US NOW</button></div>
               </div>
             </div>
 
@@ -58,10 +58,10 @@
                   <div class="row">
                     <div class="col"><img src="@/assets/img/event-thumbnail.jpeg" alt="" class="img-fluid"></div>
                     <div class="col">
-                      <h3>Bistro Alégria</h3>
-                      <p>March 2, 2019</p>
+                      <h3>National Arts Centre</h3>
+                      <p>May 29, 2019</p>
                       <!-- <button class="btn btn--red disabled" disabled>BUY TICKETS</button> -->
-                      <a href="https://www.facebook.com/events/400439614047030/" target="_blank" class="btn btn--red">MORE</a>
+                      <a href="https://nac-cna.ca/en/event/21864" target="_blank" class="btn btn--red">MORE</a>
                     </div>
                   </div>
                 </div>
@@ -115,7 +115,7 @@
               <div class="col">
                 <div>
                   <h2 class="about__header">ABOUT</h2>
-                  <p>Based in the Ottawa-Gatineau Region, this Latin guitar duo has been quickly establishing a reputation for their unique and symbiotic connectivity on stage. Guitarists Gabriela Iznardo and Alejandro Vega have wowed and delighted audiences with their signatre blend of Latin American and Spanish rhythms.</p>
+                  <p>Based in the Ottawa-Gatineau Region, this Latin guitar duo has been quickly establishing a reputation for their unique and symbiotic connectivity on stage. Guitarists Gabriela Iznardo and Alejandro Vega have wowed and delighted audiences with their signature blend of Latin American and Spanish rhythms.</p>
                   <p>Making themselves available for venues, private and corporate events,  reunions, and dinner parties in Ottawa, Montreal, and Toronto, Duo Waqay will provide a fusion of guitar and entertainment to suit any venue.</p>
                 </div>
               </div>
@@ -132,14 +132,8 @@
                 <div class="event__schedule">
                   <table class="table table-hover">
                     <tr>
-                      <td class="event__date align-middle">March 5, 2019</td>
-                      <td class="event__location align-middle"><a href="https://bistroalegria.ca/">Bistro Alégria</a></td>
-                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <fa :icon="['fas', 'fa-ticket']" /></button></td>
-                    </tr>
-
-                    <tr>
                       <td class="event__date align-middle">May 29, 2019</td>
-                      <td class="event__location align-middle">National Arts Centre</td>
+                      <td class="event__location align-middle"><a href="https://nac-cna.ca/en/event/21864" target="_blank" rel="noopener noreferrer">National Arts Centre</a></td>
                       <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
                     </tr>
                   </table>
