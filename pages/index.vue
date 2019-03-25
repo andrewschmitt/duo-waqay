@@ -4,9 +4,21 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     
     <!-- NAV -->
-    <!-- <nav class="navbar">
-      <h1 class="navbar__header">duo WAQAY</h1>
-    </nav> -->
+    <nav class="navbar navbar-fixed navbar-expand-sm justify-content-between">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <a class="navbar-brand" href="#">duo Waqáy</a>
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">About <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Gallery</a>
+          <a class="nav-item nav-link" href="#">Contact</a>
+          <a class="nav-item nav-link" href="#">Events</a>
+        </div>
+        <!-- <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+      </div>
+    </nav>
 
     <!-- MAIN CONTENT -->
     <main>
@@ -14,7 +26,7 @@
       <!-- HERO IMG -->
       <section class="hero">
         <header>
-          <!-- <h1 class="hero__header">duo WAQAY</h1> -->
+          <h1 class="hero__header">duo&nbsp;Waqáy</h1>
         </header>
         <!-- <p><i>[wah-kaie]</i></p> -->
         <div class="hero__chevron"><fa :icon="['fas', 'chevron-down']" /></div>
@@ -27,7 +39,7 @@
             <!-- DEFINITION -->
             <div class="col-md-5">
               <div class="definition">
-                <h2 class="definition__header">WAQAY</h2>
+                <h2 class="definition__header">Waqáy</h2>
                 <i class="definition__linguistic">[wah-kaie]</i>
                 <ol class="definition__list">
                   <li>The cry of a musical instrument</li>
@@ -40,7 +52,7 @@
             <!-- EVENTS -->
             <div class="col-md-7">
               <div class="events">
-                <h2 class="events__header">NEXT EVENT</h2>
+                <h2 class="events__header">Next Event</h2>
                 <div class="events__schedule">
                   <!-- <table class="table table-hover">
                     <tr>
@@ -61,7 +73,7 @@
                       <h3>National Arts Centre</h3>
                       <p>May 29, 2019</p>
                       <!-- <button class="btn btn--red disabled" disabled>BUY TICKETS</button> -->
-                      <a href="https://nac-cna.ca/en/event/21864" target="_blank" class="btn btn--red">MORE</a>
+                      <a href="https://nac-cna.ca/en/event/21864" target="_blank" class="btn btn--red">Buy Tickets</a>
                     </div>
                   </div>
                 </div>
@@ -116,7 +128,7 @@
                 <div>
                   <h2 class="about__header">ABOUT</h2>
                   <p>Based in the Ottawa-Gatineau Region, this Latin guitar duo has been quickly establishing a reputation for their unique and symbiotic connectivity on stage. Guitarists Gabriela Iznardo and Alejandro Vega have wowed and delighted audiences with their signature blend of Latin American and Spanish rhythms.</p>
-                  <p>Making themselves available for venues, private and corporate events,  reunions, and dinner parties in Ottawa, Montreal, and Toronto, Duo Waqay will provide a fusion of guitar and entertainment to suit any venue.</p>
+                  <p>Making themselves available for venues, private and corporate events,  reunions, and dinner parties in Ottawa, Montreal, and Toronto, duo Waqáy will provide a fusion of guitar and entertainment to suit any venue.</p>
                 </div>
               </div>
             </div>
@@ -181,7 +193,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm footer__divide-line">
-            <h3 class="footer__header">Follow duo WAQAY</h3>
+            <h3 class="footer__header">Follow duo Waqáy</h3>
             <div class="media-tags d-flex justify-content-center align-items-center">
               <a href="https://www.facebook.com/duowaqay/" target="_blank" class="fa fa--facebook"><fa :icon="['fab', 'facebook-f']" /></a>
               <a href="https://www.youtube.com/channel/UCmMtA54V0IBvaJgBVHPgK6Q" target="_blank" class="fa fa--youtube"><fa :icon="['fab', 'youtube']" /></a>
@@ -253,7 +265,14 @@ export default {
   * NAVBAR
   */
   .navbar {
-    background-color: $orange;
+    background: transparent;
+    position: absolute;
+    z-index: 11;
+    color: #fff;
+    a {
+      color: #fff;
+    }
+    // top: 0px;
 
     &__header {
       margin: 0;
@@ -266,17 +285,19 @@ export default {
   * HERO IMG
   */
   .hero {
-    background-image: url('~assets/img/hero-img.jpg');
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('~assets/img/hero-img.jpg');
     background-size: cover;
     background-position: center;
     padding: 17% 25% 40%;
     position: relative;
 
     &__header {
-      font-size: 2rem;
+      font-size: 3rem;
       text-align: center;
       color: #fff;
-      background-color: black;
+      font-weight: 700;
+      // background-color: black;
       // margin: 0; 
     }
 
@@ -348,6 +369,9 @@ export default {
   * ALBUM
   */
   .album {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('~assets/img/deniz9_meme.jpeg');
+    background-size: cover;
+    background-position: center;
     background-color: #333;
     color: #fff;
     padding: 2rem 0;
