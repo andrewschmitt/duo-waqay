@@ -86,7 +86,7 @@
         <div class="album ">
           <div class="container">
             <div class="album__header-block">
-              <h2 class="album__header">LATIN ROOTS</h2>
+              <h2 class="album__header">Album - Latin Roots</h2>
               <i class="album__subheader">Available Now</i>
             </div>
             
@@ -121,7 +121,7 @@
         </div>
 
         <!-- ABOUT US --> 
-        <div class="about about--brown">
+        <!-- <div class="about about--brown">
           <div class="container">
             <div class="row">
               <div class="col">
@@ -133,7 +133,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- UPCOMING EVENTS -->
         <div class="container">
@@ -158,7 +158,7 @@
         <div class="contact">
           <div class="container">
             <h3 class="title">CONTACT</h3>
-            <p>We'd love to hear from you! Please drop us a line if you've any query related to our products or services.</p>
+            <p>We'd love to hear from you! Please contact us if you have any questions related to our music or services.</p>
             <div class="content">
               <form name="contact" method="post" data-netlify="true">
                 <div class="form-group">
