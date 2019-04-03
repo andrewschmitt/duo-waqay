@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <a class="navbar-brand" href="#">duo Waqáy</a>
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#">About <span class="sr-only">(current)</span></a>
+          <nuxt-link class="nav-item nav-link" to="/">About</nuxt-link>
           <a class="nav-item nav-link" href="#">Gallery</a>
           <a class="nav-item nav-link" href="#">Contact</a>
           <a class="nav-item nav-link" href="#">Events</a>
@@ -27,6 +27,17 @@
       <section class="hero">
         <header>
           <h1 class="hero__header">duo&nbsp;Waqáy</h1>
+          <p class="hero__subheader">Latin Guitar</p>
+          <div class="links text-center mt-4">
+            <a
+              href="#contact"
+              target="_blank"
+              class="btn btn--white">Get in touch</a>
+            <a
+              href="#latest-album"
+              target="_blank"
+              class="btn btn--white">Latest Album</a>
+          </div>
         </header>
         <!-- <p><i>[wah-kaie]</i></p> -->
         <div class="hero__chevron"><fa :icon="['fas', 'chevron-down']" /></div>
@@ -83,7 +94,7 @@
         </div>
 
         <!-- LATEST ALBUM STUFF -->
-        <div class="album ">
+        <div class="album" id="latest-album">
           <div class="container">
             <div class="album__header-block">
               <h2 class="album__header">Album - Latin Roots</h2>
@@ -117,7 +128,7 @@
 
         <!-- VIDEO EMBED -->
         <div class="video-frame">
-          <iframe class="video-frame__embedded" width="100%" height="500px" src="https://www.youtube.com/embed/c2DmQUYctPc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe class="video-frame__embedded" width="100%" height="500px" src="https://www.youtube.com/embed/d8Z2mKxo7H8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
         <!-- ABOUT US --> 
@@ -140,7 +151,7 @@
           <div class="row">
             <div class="col">
               <div class="events">
-                <h2 class="events__header events__header--red">EVENTS</h2>
+                <h2 class="events__header events__header--red">Events</h2>
                 <div class="event__schedule">
                   <table class="table table-hover">
                     <tr>
@@ -155,9 +166,9 @@
           </div>
         </div>
 
-        <div class="contact">
+        <div class="contact" id="contact">
           <div class="container">
-            <h3 class="title">CONTACT</h3>
+            <h3 class="title">Contact</h3>
             <p>We'd love to hear from you! Please contact us if you have any questions related to our music or services.</p>
             <div class="content">
               <form name="contact" method="post" data-netlify="true">
@@ -286,10 +297,10 @@ export default {
   */
   .hero {
     
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('~assets/img/hero-img.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url('~assets/img/hero-img.jpg');
     background-size: cover;
     background-position: center;
-    padding: 17% 25% 40%;
+    padding: 17% 5% 40%;
     position: relative;
 
     &__header {
@@ -299,6 +310,16 @@ export default {
       font-weight: 700;
       // background-color: black;
       // margin: 0; 
+    }
+
+    &__subheader {
+      text-align: center;
+      color: #fff;
+      font-size: 1.3em;
+      font-weight: 200;
+      color: #eee;
+      font-style: italic;
+      margin-top: -5px;
     }
 
     &__definition {
@@ -474,7 +495,7 @@ export default {
   */
   .footer {
     // min-height: 10rem;
-    background-color: #333;
+    background-color: #000;
     padding: 2rem 0;
 
     //
@@ -536,7 +557,9 @@ export default {
   * button styles
   */
   .btn {
-    border-radius: 0px;
+    border-radius: 3px;
+    display: inline-block;
+    text-transform: uppercase;
   }
   .btn--grey {
     background-color: #ccc;
@@ -544,7 +567,7 @@ export default {
   .btn--white {
     background-color: transparent;
     color: #fff;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
 
     &:hover {
       color: #ccc;
@@ -553,7 +576,7 @@ export default {
 
   .btn--red {
     color: $red;
-    border: 2px solid $red;
+    border: 1px solid $red;
 
     &:hover {
       opacity: .75;
@@ -563,7 +586,7 @@ export default {
 
   .btn--orange {
     color: $orange;
-    border: 2px solid $orange;
+    border: 1px solid $orange;
 
     &:hover {
       opacity: .75;
