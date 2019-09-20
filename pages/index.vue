@@ -97,8 +97,8 @@
         <div class="album" id="latest-album">
           <div class="container">
             <div class="album__header-block">
-              <h2 class="album__header">Album - Latin Roots</h2>
-              <i class="album__subheader">Available Now</i>
+              <h2 class="album__header">New Album Out Now!</h2>
+              <i class="album__subheader">Latin Roots</i>
             </div>
             
             <div class="row">
@@ -127,8 +127,17 @@
         </div>
 
         <!-- VIDEO EMBED -->
-        <div class="video-frame">
-          <iframe class="video-frame__embedded" width="100%" height="500px" src="https://www.youtube.com/embed/d8Z2mKxo7H8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="content-block content-block--grey">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h2>Video</h2>
+                <div class="video-frame">
+                  <iframe class="video-frame__embedded" width="100%" height="500px" src="https://www.youtube.com/embed/d8Z2mKxo7H8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- ABOUT US --> 
@@ -154,10 +163,10 @@
                 <h2 class="events__header events__header--red">Events</h2>
                 <div class="event__schedule">
                   <table class="table table-hover">
-                    <tr>
-                      <td class="event__date align-middle">May 29, 2019</td>
-                      <td class="event__location align-middle"><a href="https://nac-cna.ca/en/event/21864" target="_blank" rel="noopener noreferrer">National Arts Centre</a></td>
-                      <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <font-awesome-icon icon="ticket-alt" /></button></td>
+                    <tr v-for="(event, index) in pastEvents" :key="index">
+                      <td class="event__date align-middle">{{event.date}}</td>
+                      <td class="event__location align-middle"><a :href="event.ticketLocation" target="_blank" rel="noopener noreferrer">{{event.location}}</a></td>
+                      <!-- <td class="event__button align-middle"><button class="btn btn--red disabled" disabled>TICKETS <font-awesome-icon icon="ticket-alt" /></button></td> -->
                     </tr>
                   </table>
                 </div>
@@ -248,6 +257,32 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  data () {
+    return {
+      pastEvents: [
+        {
+          date: "May 29, 2019",
+          location: "National Arts Centre",
+          ticketLocation: "https://nac-cna.ca/en/event/21864"
+        },
+        {
+          date: "May 30, 2019",
+          location: "National Arts Centre",
+          ticketLocation: "www.nac.com"
+        },
+        {
+          date: "May 31, 2019",
+          location: "National Arts Centre",
+          ticketLocation: "www.nac.com"
+        },
+        {
+          date: "May 32, 2019",
+          location: "National Arts Centre",
+          ticketLocation: "www.nac.com"
+        }
+      ]
+    }
   }
 }
 </script>
@@ -260,6 +295,7 @@ export default {
   $brown: #503431;
   $teal: #55a393;
   $green: #4b6c57;
+  $light-grey: #D3D3D3;
 
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -276,8 +312,10 @@ export default {
   * NAVBAR
   */
   .navbar {
-    background: transparent;
-    position: absolute;
+    // background: transparent;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
     z-index: 11;
     color: #fff;
     a {
@@ -301,7 +339,11 @@ export default {
     background-size: cover;
     background-position: center;
     padding: 17% 5% 40%;
-    position: relative;
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
 
     &__header {
       font-size: 3rem;
@@ -343,6 +385,8 @@ export default {
   */
   .main-content {
     // background-image: #eee;
+    margin-top: 100vh;
+    background-color: #fff;
   }
   
   /**
@@ -443,6 +487,14 @@ export default {
   /**
   * EMBEDDED VIDEO
   */
+  .content-block {
+    padding: 2rem 0;
+
+    &--grey {
+      background-color: #DCDCDC	;
+    }
+  }
+
   .video-frame {
     padding: 30% 0;
     width: 100%;
@@ -479,7 +531,8 @@ export default {
   * CONTACT
   */
   .contact {
-    margin: 1rem auto; 
+    padding: 1rem 0;
+    // background-color: $light-grey;
   }
 
   /**
