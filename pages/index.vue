@@ -6,9 +6,9 @@
     <!-- NAV -->
     <nav class="navbar navbar-fixed navbar-expand-sm justify-content-between">
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <a class="navbar-brand" href="#">duo Waqáy</a>
+        <a class="navbar-brand" href="#"><strong>duo Waqáy</strong></a>
         <div class="navbar-nav">
-          <nuxt-link class="nav-item nav-link" to="/">About</nuxt-link>
+          <nuxt-link class="nav-item nav-link" to="/about">About</nuxt-link>
           <a class="nav-item nav-link" href="#">Gallery</a>
           <a class="nav-item nav-link" href="#">Contact</a>
           <a class="nav-item nav-link" href="#">Events</a>
@@ -40,7 +40,7 @@
           </div>
         </header>
         <!-- <p><i>[wah-kaie]</i></p> -->
-        <div class="hero__chevron"><fa :icon="['fas', 'chevron-down']" /></div>
+        <!-- <div class="hero__chevron"><fa :icon="['fas', 'chevron-down']" /></div> -->
       </section>
 
       <!-- DEFINITION AND EVENTS -->
@@ -63,7 +63,7 @@
             <!-- EVENTS -->
             <div class="col-md-7">
               <div class="events">
-                <h2 class="events__header">Next Event</h2>
+                <h2 class="events__header">Last Event</h2>
                 <div class="events__schedule">
                   <!-- <table class="table table-hover">
                     <tr>
@@ -84,7 +84,7 @@
                       <h3>National Arts Centre</h3>
                       <p>May 29, 2019</p>
                       <!-- <button class="btn btn--red disabled" disabled>BUY TICKETS</button> -->
-                      <a href="https://nac-cna.ca/en/event/21864" target="_blank" class="btn btn--red">Buy Tickets</a>
+                      <!-- <a href="https://nac-cna.ca/en/event/21864" target="_blank" class="btn btn--red">Buy Tickets</a> -->
                     </div>
                   </div>
                 </div>
@@ -126,6 +126,36 @@
           </div>
         </div>
 
+        <div class="contact" id="contact">
+          <div class="container">
+            <h3 class="title">Contact</h3>
+            <p>We'd love to hear from you! Please contact us if you have any questions related to our music or services.</p>
+            <div class="content">
+              <form name="contact" method="post" data-netlify="true">
+                <div class="form-group">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <label for="inputContact">Name</label>
+                  <input class="form-control" id="inputContact" placeholder="John Doe" name="name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <!-- <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+                </div>
+                <button class="form-button btn btn--red" type="submit" value="Send message">SEND</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
         <!-- VIDEO EMBED -->
         <div class="content-block content-block--grey">
           <div class="container">
@@ -160,7 +190,7 @@
           <div class="row">
             <div class="col">
               <div class="events">
-                <h2 class="events__header events__header--red">Events</h2>
+                <h2 class="events__header">Past Events</h2>
                 <div class="event__schedule">
                   <table class="table table-hover">
                     <tr v-for="(event, index) in pastEvents" :key="index">
@@ -174,39 +204,6 @@
             </div>
           </div>
         </div>
-
-        <div class="contact" id="contact">
-          <div class="container">
-            <h3 class="title">Contact</h3>
-            <p>We'd love to hear from you! Please contact us if you have any questions related to our music or services.</p>
-            <div class="content">
-              <form name="contact" method="post" data-netlify="true">
-                <div class="form-group">
-                  <input type="hidden" name="form-name" value="contact" />
-                  <label for="inputContact">Name</label>
-                  <input class="form-control" id="inputContact" placeholder="John Doe" name="name">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <!-- <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div> -->
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Message</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
-                </div>
-                <button class="form-button btn btn--red" type="submit" value="Send message">SEND</button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-
-        
       </section>
     </main>
     <footer class="footer">
@@ -262,25 +259,20 @@ export default {
     return {
       pastEvents: [
         {
+          date: "June 4, 2019",
+          location: "Toronto",
+          ticketLocation: "https://nac-cna.ca/en/event/21864"
+        },
+        {
           date: "May 29, 2019",
           location: "National Arts Centre",
           ticketLocation: "https://nac-cna.ca/en/event/21864"
         },
         {
-          date: "May 30, 2019",
-          location: "National Arts Centre",
-          ticketLocation: "www.nac.com"
+          date: "May 24, 2019",
+          location: "Mavericks, Live with Opal Ocean",
+          ticketLocation: "https://nac-cna.ca/en/event/21864"
         },
-        {
-          date: "May 31, 2019",
-          location: "National Arts Centre",
-          ticketLocation: "www.nac.com"
-        },
-        {
-          date: "May 32, 2019",
-          location: "National Arts Centre",
-          ticketLocation: "www.nac.com"
-        }
       ]
     }
   }
