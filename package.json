@@ -22,7 +22,7 @@
     "bootstrap-vue": "^2.0.0-beta",
     "cross-env": "^5.2.0",
     "g": "^2.0.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "node-sass": "^4.9.3",
     "nuxt": "^2.1.0",
     "nuxt-fontawesome": "^0.4.0",
